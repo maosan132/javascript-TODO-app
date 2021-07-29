@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>TODO App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+</head>
+
+<body class="text-monospace">
+
+  <div id="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <picture class="d-flex justify-content-center"><img class="py-2" src="../src/todogen-logo.png"
+              alt="image of todogen logo" /></picture>
+          <p class="text-center">I am a to do creator app. Create a project that will contain your TODO list.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="interaction">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="box"></div>
+
+
+          <div class="d-inline-block flex-wrap py-4" id="menu">
+            <button class="btn btn-primary btn-block btn-lg border rounded" id="new" type="button"
+              style="height: 68px;text-align: center;">New Project</button>
+            <button class="btn btn-info btn-block btn-lg border rounded" id="default" type="button"
+              style="height: 68px;text-align: center;">Default Project</button>
+            <button class="btn btn-success btn-block btn-lg border rounded" id="projects" type="button"
+              style="height: 68px;text-align: center;">Explore Projects</button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <template id="template-project">
+    <div class="alert alert-primary justify-content-between align-items-center" role="button">
+      <p class="m-0"></p>
+    </div>
+  </template>
+
+  <template id="template-task">
+    <div class="alert alert-warning align-items-center">
+      <div class="d-flex justify-content-between">
+        <h3 class="m-0">
+          <i class="fa fa-battery-half"></i>
+        </h3>
+        <p class="m-0">Have hair cut</p>
+        <span id="date">22/12/2021</span>
+      </div>
+      <hr class="m-0" />
+      <div class="d-flex justify-content-between align-items-baseline">
+        <span>Need to make my head a new style for the party</span>
+        <h3 style="margin: 0px;">
+          <i class="fas fa-check-circle text-success" role="button"></i>
+          <i class="fas fa-minus-circle text-danger" role="button"></i>
+          <i class="fas fa-edit" role="button"></i>
+        </h3>
+      </div>
+    </div>
+  </template>
+
+  <script src="bundle.js"></script>
+</body>
+
+</html>
